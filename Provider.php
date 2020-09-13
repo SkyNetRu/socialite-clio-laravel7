@@ -5,6 +5,7 @@ namespace SocialiteProviders\Clio;
 use Laravel\Socialite\Two\ProviderInterface;
 use SocialiteProviders\Manager\OAuth2\AbstractProvider;
 use SocialiteProviders\Manager\OAuth2\User;
+use Illuminate\Support\Arr;
 
 use GuzzleHttp\ClientInterface;
 
@@ -63,14 +64,14 @@ class Provider extends AbstractProvider implements ProviderInterface
     protected function mapUserToObject(array $user)
     {
         return (new User())->setRaw($user['data'])->map([
-            'id' => array_get($user, 'data.id'),
-            'etag' => array_get($user, 'data.etag'),
-            'name' => array_get($user, 'data.name'),
-            'last_name' => array_get($user, 'data.last_name'),
-            'first_name' => array_get($user, 'data.first_name'),
-            'email' => array_get($user, 'data.email'),
-            'enabled' => array_get($user, 'data.enabled'),
-            'account_owner' => array_get($user, 'data.account_owner'),
+            'id' => Arr::get($user, 'data.id'),
+            'etag' => Arr::get($user, 'data.etag'),
+            'name' => Arr::get($user, 'data.name'),
+            'last_name' => Arr::get($user, 'data.last_name'),
+            'first_name' => Arr::get($user, 'data.first_name'),
+            'email' => Arr::get($user, 'data.email'),
+            'enabled' => Arr::get($user, 'data.enabled'),
+            'account_owner' => Arr::get($user, 'data.account_owner'),
         ]);
     }
 
