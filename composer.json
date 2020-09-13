@@ -1,0 +1,22 @@
+{
+    "name": "skynetru/socialite-clio-laravel7",
+    "description": "Clio OAuth2 Provider for Laravel 7 Socialite",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Nikolai Demin",
+            "email": "demin.nikolai@Inbox.ru"
+        }
+    ],
+    "homepage": "https://github.com/cesarga/socialite-clio",
+    "keywords": ["Laravel", "Socialite", "Clio"],
+    "require": {
+        "php": "^5.6 || ^7.0",
+        "socialiteproviders/manager": "~2.0 || ~3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "SocialiteProviders\\Clio\\": ""
+        }
+    }
+}
