@@ -8,7 +8,7 @@
             "email": "demin.nikolai@Inbox.ru"
         }
     ],
-    "homepage": "https://github.com/cesarga/socialite-clio",
+    "homepage": "https://github.com/skynetru/socialite-clio-laravel7",
     "keywords": ["Laravel", "Socialite", "Clio"],
     "require": {
         "php": "^5.6 || ^7.0",
